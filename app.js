@@ -91,11 +91,11 @@ function main(){
                 await inquirer.prompt([{
                     message: "What is the first name?",
                     type: 'input',
-                    name: "firstname",
+                    name: "first_name",
                 }, {
                     message: "What is the last name?",
                     type: 'input',
-                    name: "lastname",
+                    name: "last_name",
                 }, {
                     message: "What role id for this employee?",
                     type: 'list',
