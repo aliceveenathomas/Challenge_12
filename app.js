@@ -3,7 +3,7 @@ const { getDepartments, addDepartment } = require('./operations/department');
 const { updateEmployeeRole, getEmployees, addEmployee } = require('./operations/employee');
 const { getRoles, addRole } = require('./operations/role');
 
-// const { getRoles } = require('./operations/role');
+
 
 function main(){
     return inquirer.prompt([{
@@ -48,7 +48,7 @@ function main(){
         case "view all roles":
             const roles = await getRoles();
             console.table(roles);
-        // console.log();
+      
             // fields needed: role details + department_name(comes from depart table -- need to join)
             break;
         case "exit":
@@ -117,11 +117,11 @@ function main(){
                 break;
             }
 
-            // write the sql query in workbench  -- test until you are happy
+            // write the sql query in workbench  
 
             //  -- review join statement
 
-            // copy and paste to a function you defined in here
+           
 
 
 
