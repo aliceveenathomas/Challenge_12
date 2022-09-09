@@ -50,7 +50,7 @@ async function updateEmployeeRole(){
 async function getEmployees(){
     const db = await connect();
     //  use join statement to grab role and manager name
-    const [employees] = await db.query('SELECT * FROM employees JOIN roles ON employees.role_id = roles.id JOIN departments ON departments.id=roles.department_id;');
+    const [employees] = await db.query('SELECT employees.id, first_name, last_name, roles.title, roles.salary, departments.name as department_name FROM employees JOIN roles ON employees.role_id = roles.id JOIN departments ON departments.id=roles.department_id;');
 
     return employees;
 }
